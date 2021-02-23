@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beststoreshopforyou</title>
+    <link rel="stylesheet" href="./styles/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Start Page up button-->
+        <div class="pageUpBtn">
+            <a href="#home">
+                <i class="fas fa-angle-double-up"></i>
+            </a>
+        </div>
+
+        <!--End page up button-->
+
+        <!--Start small advetisment in left bottom corner-->
+        <div class="advertisement" id="advertisement" onload="changeAd()">
+            <i onclick="closeAd()" class="fas fa-window-close"></i>
+            <img id="url" src="./images/ad-T-shirt.jpg" alt="">
+            <div class="adInfo">
+                <p>Someone purchsed</p>
+                <p id="name" class="productName">Megamart Special</p>
+                <p id="locate" class="locate">10 minutes ago from New York, USA</p>
+            </div>
+        </div>
+        <!--End small advetisment in left bottom corner-->
+
+        <!--Start header-->
+        <div class="header" id="home">
+            <div class="info">
+                <div class="discount">
+                    <p>INSTANT DISCOUNT CODE 50% OFF</p><span>MM50</span>
+                </div>
+                <div class="link">
+                    <a class="hide" href="">ABOUT US</a>
+                    <a class="hide" href="">CONTACT US</a>
+                    <a href=""><i class="fa fa-user-alt"></i> ACCOUNT</a>
+                    <div class="currencies">
+                        <div class="currencyBtn">VND <i class="fa fa-angle-down"></i></div>
+                        <div class="currency">
+                            <p>AUD</p>
+                            <p>CAD</p>
+                            <P>DKK</P>
+                            <p>EUR</p>
+                            <p>GBP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="logo"><a href=""><img src="./images/bestoLogo.png" alt="beststoreshopforyou"></a></div>
+                <div class="navBarBtn" id="navBarBtn" onclick="showBar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <script>
+                    function showBar() {
+                        document.getElementById("barMobile").style.display = "flex";
+                    }
+                </script>
+                <div class="search"><input type="text" name="" id="" placeholder="Seach products, brands or device">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="wishlist"><i class="far fa-heart"></i><span>Wishlist</span></div>
+                <div class="cart"><i class="fa fa-shopping-cart"></i> <span>0 VND</span> </div>
+            </div>
+
+            <div class="barMobile" id="barMobile" style="display:none;">
+                <div class="barMobile-content">
+                    <i id="closeBar" class="fa fa-times" onclick="closeBar()"></i>
+                    <script>
+                        function closeBar() {
+                            document.getElementById("barMobile").style.display = "none";
+                        }
+                    </script>
+                    <div class="mainMenu">
+                        <ul>
+                            <li class="item1">
+                                <div class="home">
+                                    <p>Home</p><i onclick="openHome1()" class="fa fa-angle-down"></i>
+                                </div>
+                                <div class="homeMenu" id="home1">
+                                    <a href="#">Home 01</a>
+                                    <a href="#">Home 01 (BOX)</a>
+                                    <a href="#">Home 01 (RTL)</a>
+                                    <a href="#">Home 02</a>
+                                    <a href="#">Home 02 (BOX)</a>
+                                    <a href="#">Home 02 (RTL)</a>
+                                    <a href="#">Home 03</a>
+                                    <a href="#">Home 03 (BOX)</a>
+                                    <a href="#">Home 03 (RTL)</a>
+                                    <a href="#">Home 04</a>
+                                    <a href="#">Home 04 (BOX)</a>
+                                    <a href="#">Home 04 (RTL)</a>
+                                </div>
+                                <script>
+                                    let home1 = 0;
+                                    function openHome1() {
+                                        home1++;
+                                        if (home1 % 2 != 0) { document.getElementById("home1").style.display = "flex"; }
+                                        else { document.getElementById("home1").style.display = "none"; }
+
+                                    }
+                                </script>
+                            </li>
+
+                            <li class="item1">
+                                <div class="home">
+                                    <p>Products</p><i onclick="openHome2()" class="fa fa-angle-down"></i>
+                                </div>
+                                <div class="homeMenu special" id="home2">
+                                    <a href="#">Default</a>
+                                    <a href="#">Centered</a>
+                                    <a href="#">Left Thumbnail</a>
+                                    <a href="#">Products Boxed</a>
+                                    <a href="#">With sidebar</a>
+                                    <a href="#">Product External / Affilicate</a>
+                                    <a href="#">Disable default Variant</a>
+                                    <a href="#">Extra Content #1</a>
+                                    <a href="#">Sticky add to cart</a>
+                                </div>
+                                <script>
+                                    let home2 = 0;
+                                    function openHome2() {
+                                        home2++;
+                                        if (home2 % 2 != 0) { document.getElementById("home2").style.display = "flex"; }
+                                        else { document.getElementById("home2").style.display = "none"; }
+
+                                    }
+                                </script>
+                            </li>
+                            <li class="item1">
+                                <div class="home">
+                                    <p>Blogs</p><i onclick="openHome3()" class="fa fa-angle-down"></i>
+                                </div>
+                                <div class="homeMenu special" id="home3">
+                                    <a href="#">Standard Without Sidebar</a>
+                                    <a href="#">Standard With Left Sidebar</a>
+                                    <a href="#">Standard With Right Sidebar</a>
+                                    <a href="#">Two Gride</a>
+                                    <a href="#">Three Gride</a>
+                                </div>
+                                <script>
+                                    let home3 = 0;
+                                    function openHome3() {
+                                        home3++;
+                                        if (home3 % 2 != 0) { document.getElementById("home3").style.display = "flex"; }
+                                        else { document.getElementById("home3").style.display = "none"; }
+
+                                    }
+                                </script>
+                            </li>
+                            <li class="item1">
+                                <div class="home">
+                                    <p>Pages</p><i onclick="openHome4()" class="fa fa-angle-down"></i>
+                                </div>
+                                <div class="homeMenu" id="home4">
+                                    <a href="#">About us</a>
+                                    <a href="#">Contact us</a>
+                                    <a href="#">FAQ's</a>
+                                    <a href="#">Payment Policy</a>
+                                    <a href="#">Return Policy</a>
+                                    <a href="#">Shopping Policy</a>
+                                    <a href="#">Sitemap</a>
+                                    <a href="#">Terms & Condition</a>
+                                    <a href="#">Privacy Policy</a>
+                                </div>
+                                <script>
+                                    let home4 = 0;
+                                    function openHome4() {
+                                        home4++;
+                                        if (home4 % 2 != 0) { document.getElementById("home4").style.display = "flex"; }
+                                        else { document.getElementById("home4").style.display = "none"; }
+
+                                    }
+                                </script>
+                            </li>
+                            <li class="item1">
+                                <div class="home">
+                                    <p>Buy Besto</p>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="category">
+                    <button class="btnDropdown" onclick="dropdown()"> Browse Category<i
+                            class="fa fa-angle-down"></i></button>
+                    <div class="dropdown-content" id="dropDownList">
+                        <a href="#">Sport & Outdoor</a>
+                        <a href="#">Consumer Electric</a>
+                        <a href="#">Home, Garden & Kitchen</a>
+                        <a href="#">Book & Office</a>
+                        <a href="#">Phone & Accessories</a>
+                        <a href="#">Babies & Moms</a>
+                        <a href="#">Hand Made</a>
+                        <a href="#">Computer & Technologies</a>
+                        <a href="#">Jewelry & Watches</a>
+                        <a href="#">Health & Beauty</a>
+                    </div>
+                </div>
+                <div class="mainMenu">
+                    <ul>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Home</p><i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="homeMenu">
+                                <a href="#">Home 01</a>
+                                <a href="#">Home 01 (BOX)</a>
+                                <a href="#">Home 01 (RTL)</a>
+                                <a href="#">Home 02</a>
+                                <a href="#">Home 02 (BOX)</a>
+                                <a href="#">Home 02 (RTL)</a>
+                                <a href="#">Home 03</a>
+                                <a href="#">Home 03 (BOX)</a>
+                                <a href="#">Home 03 (RTL)</a>
+                                <a href="#">Home 04</a>
+                                <a href="#">Home 04 (BOX)</a>
+                                <a href="#">Home 04 (RTL)</a>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Shop</p><i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="menuContent">
+                                <div class="column">
+                                    <h3>Tablate</h3>
+                                    <a href="#">Samsung Tablate</a>
+                                    <a href="#">Apple Watch</a>
+                                    <a href="#">Bravia LED</a>
+                                    <a href="#">Mi Earphone 5</a>
+                                    <a href="#">Women Top</a>
+                                    <a href="#">Electronic</a>
+                                    <a href="#">Rayban Glass</a>
+                                </div>
+                                <div class="column">
+                                    <h3>Home TV</h3>
+                                    <a href="#">Sony Camera</a>
+                                    <a href="#">Home Theater</a>
+                                    <a href="#">Classic Mouse</a>
+                                    <a href="#">Bravia Sea World TV</a>
+                                    <a href="#">Portable Speaker</a>
+                                    <a href="#">Air Drone</a>
+                                    <a href="#">Portable Speker</a>
+                                </div>
+                                <div class="column">
+                                    <h3>Mobile Phone</h3>
+                                    <a href="#">Watch</a>
+                                    <a href="#">Shoes</a>
+                                    <a href="#">Funiture</a>
+                                    <a href="#">Jewellry</a>
+                                    <a href="#">Clothe</a>
+                                    <a href="#">Brown Bag</a>
+                                    <a href="#">Night Wear Top</a>
+                                </div>
+                                <div class="column">
+                                    <h3>Computer & Accessories</h3>
+                                    <a href="#">Headphone Pro10</a>
+                                    <a href="#">Sony Brand Camera</a>
+                                    <a href="#">Rayban Glass</a>
+                                    <a href="#">The Regan Boot In Suede</a>
+                                    <a href="#">Portable Speker</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Clollections</p><i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="menuContent picture">
+                                <div class="column">
+                                    <a href="#"><img src="./images/shopHomeAppliances.jpg"
+                                            alt="Shop Home Appliances"></a>
+                                    <a href="#">Shop Home Appliances</a>
+                                </div>
+                                <div class="column">
+                                    <a href="#"><img src="./images/shopAudiableAudio.jpg" alt="Shop Audiable Audio"></a>
+                                    <a href="#">Shop Audiable Audio</a>
+                                </div>
+                                <div class="column">
+                                    <a href="#"><img src="./images/shopSmartTV.jpg" alt="Shop Smart TV"></a>
+                                    <a href="#">Shop Smart TV</a>
+                                </div>
+                                <div class="column">
+                                    <a href="#"><img src="./images/shopSmartTablet.jpg" alt="Shop Smart Tablate"></a>
+                                    <a href="#">Shop Smart Tablate</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Products</p><i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="homeMenu special">
+                                <a href="#">Default</a>
+                                <a href="#">Centered</a>
+                                <a href="#">Left Thumbnail</a>
+                                <a href="#">Products Boxed</a>
+                                <a href="#">With sidebar</a>
+                                <a href="#">Product External / Affilicate</a>
+                                <a href="#">Disable default Variant</a>
+                                <a href="#">Extra Content #1</a>
+                                <a href="#">Sticky add to cart</a>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Blogs</p><i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="homeMenu special">
+                                <a href="#">Standard Without Sidebar</a>
+                                <a href="#">Standard With Left Sidebar</a>
+                                <a href="#">Standard With Right Sidebar</a>
+                                <a href="#">Two Gride</a>
+                                <a href="#">Three Gride</a>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Pages</p><i class="fa fa-angle-down"></i>
+                            </div>
+                            <div class="homeMenu">
+                                <a href="#">About us</a>
+                                <a href="#">Contact us</a>
+                                <a href="#">FAQ's</a>
+                                <a href="#">Payment Policy</a>
+                                <a href="#">Return Policy</a>
+                                <a href="#">Shopping Policy</a>
+                                <a href="#">Sitemap</a>
+                                <a href="#">Terms & Condition</a>
+                                <a href="#">Privacy Policy</a>
+                            </div>
+                        </li>
+                        <li class="item1">
+                            <div class="home">
+                                <p>Buy Besto</p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="call">
+                    <p>CALL US: </p>
+                    <p class="num">1900-6789</p>
+                </div>
+            </div>
+        </div>
+        <!--End header-->
+
+        <!--Start Slideshow-->
+        <div class="slideShow">
+            <div class="slide">
+                <img id="slide" src="./images/slide1.jpg" alt="">
+
+            </div>
+            <i id="angle" class="fa fa-angle-right" onclick="changeSlide()"></i>
+            <div class="circle">
+                <i id="c1" class="fas fa-circle"></i>
+                <i id="c2" class="fas fa-circle"></i>
+                <i id="c3" class="fas fa-circle"></i>
+            </div>
+        </div>
+        <!--End Slideshow-->
+
+        <!--Start main content-->
+        <div class="mainContent">
+
+            <div class="leftContent">
+                <!--Start sample picture-->
+                <div class="ad-image">
+                    <img src="./images/shopHomeAppliances.jpg" alt="">
+                    <div class="decription">
+                        <p>Fresh Food</p>
+                        <h2>Chair Collection</h2>
+                        <button>SHOP NOW</button>
+                    </div>
+                    <div class="page1"></div>
+                    <div class="page2"></div>
+                </div>
+                <!--End sample picture-->
+
+
+                <!-- Start Feature Collection-->
+                <div class="ad-content featureCollection">
+                    <div class="title">
+                        <h3>Feature Collection</h3>
+                        <div class="straight"><span class="s1"></span><span class="s2"></span></div>
+                    </div>
+                    <div class="ad-picture">
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/supportStool.jpg" alt="">
+                                <img class="p2" src="./images/supportStool.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Support Stool Multiple">Support Stool Multiple</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">2.806.791 VND</h3>
+                                <h3 class="oldPrice">3.036.855 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/sonyCamera.jpg" alt="">
+                                <img class="p2" src="./images/sonyCamera.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Sony Brand Camera">Sony Brand Camera</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">17.047.802 VND</h3>
+                                <h3 class="oldPrice">17.277.866 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/smockstick.jpg" alt="">
+                                <img class="p2" src="./images/smockstick.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Smockstick Stand">Smockstick Stand</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">2.024.570 VND</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Feature Collection-->
+
+                <!-- Start Customer reviews-->
+                <div class="ad-content customerReviews">
+                    <div class="title">
+                        <h3>Customer Reviews</h3>
+                        <div class="straight"><span class="s1" style="width:55%;"></span><span class="s2"
+                                style="width:45%"></span></div>
+                    </div>
+                    <div class="reviewContent">
+                        <div class="commentIcon">
+                            <div><i class="fas fa-quote-left"></i></div>
+                        </div>
+                        <h3>"Friendly Support"</h3>
+                        <p>Lorem Ipsum is simply dummy text printing and typesetting industry</p>
+                        <h3>louis fonsi</h3>
+                    </div>
+                </div>
+                <!--End Customer Reviews-->
+
+                <!-- Start New Products-->
+                <div class="ad-content newProduct">
+                    <div class="title">
+                        <h3>New Products</h3>
+                        <div class="straight"><span class="s1" style="width:50%;"></span><span class="s2"
+                                style="width:50%"></span></div>
+                    </div>
+                    <div class="ad-picture">
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/blackBeard.jpg" alt="">
+                                <img class="p2" src="./images/blackBeard.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Black Beard">Black Beard</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">276.078 VND</h3>
+                                <h3 class="oldPrice">2.198.269 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/cushion.jpg" alt="">
+                                <img class="p2" src="./images/cushion.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Cushion Bolster Covers">Cushion Bolster Covers</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">276.078 VND</h3>
+                                <h3 class="oldPrice">2.198.269 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/dinningChairs.jpg" alt="">
+                                <img class="p2" src="./images/dinningChairs.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Dinning Chairs">Dinning Chairs</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">575.162 VND</h3>
+                                <h3 class="oldPrice">1.495.421 VND</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End New Products-->
+
+                <!--Start sample picture-->
+                <div class="ad-image">
+                    <img src="./images/shopAudiableAudio.jpg" alt="">
+                    <div class="decription add">
+                        <p>Headphone</p>
+                        <h2>24h Bettery Backup</h2>
+                        <button>SHOP NOW</button>
+                    </div>
+                    <div class="page1"></div>
+                    <div class="page2"></div>
+                </div>
+                <!--End sample picture-->
+
+                <!--Start Special Products-->
+                <div class="ad-content specialProducts">
+                    <div class="title">
+                        <h3>Special Products</h3>
+                        <div class="straight"><span class="s1" style="width:70%;"></span><span class="s2"
+                                style="width:30%"></span></div>
+                    </div>
+                    <div class="ad-picture">
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/appleWatch10.jpg" alt="">
+                                <img class="p2" src="./images/appleWatch10.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Apple Iwatch 10">Apple Iwatch 10</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star-half-alt"></i>
+                                </div>
+                                <h3 class="newPrice">920.259 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/bataForBeats.jpg" alt="">
+                                <img class="p2" src="./images/bataForBeats.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Bata For Beats Shoes">Bata For Beats Shoes</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">6.694.886 VND</h3>
+                                <h3 class="oldPrice">7.016.976 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/blackBeard.jpg" alt="">
+                                <img class="p2" src="./images/blackBeard.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Black Beard">Black Beard</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">575.162 VND</h3>
+                                <h3 class="oldPrice">1.495.421 VND</h3>
+                            </div>
+                        </div>
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/blackInner.jpg" alt="">
+                                <img class="p2" src="./images/blackInner.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Black Inner T-Shirt">Black Inner T-Shirt</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">575.162 VND</h3>
+                                <h3 class="oldPrice">1.495.421 VND</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Special Products-->
+            </div>
+
+            <div class="rightContent">
+                <!--Start policy-->
+                <div class="policy">
+                    <div class="policyItem">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <h3>Free Delivary</h3>
+                            <p>Others From All Item</p>
+                        </div>
+                    </div>
+
+                    <div class="policyItem">
+                        <i class="fas fa-credit-card"></i>
+                        <div>
+                            <h3>Secure Payment</h3>
+                            <p>100% Secure Payment</p>
+                        </div>
+                    </div>
+
+                    <div class="policyItem">
+                        <i class="far fa-comments"></i>
+                        <div>
+                            <h3>24/7 Support</h3>
+                            <p>Dedicated Supported</p>
+                        </div>
+                    </div>
+
+                    <div class="policyItem add">
+                        <i class="fa fa-wallet"></i>
+                        <div>
+                            <h3>90 Days Return</h3>
+                            <p>If Goods Have Problems</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End policy-->
+
+                <!--Start Popular Deparments-->
+                <div class="popularDeparments">
+                    <h2>Popular Deparments</h2>
+                    <div class="popularItem">
+                        <div class="item">
+                            <a href="#">Electronic</a>
+                            <img src="./images/electronic.jpg">
+                        </div>
+                        <div class="item">
+                            <a href="#">Funiture</a>
+                            <img src="./images/furniture.jpg">
+                        </div>
+                        <div class="item">
+                            <a href="#">Smart TV</a>
+                            <img src="./images/smartTV.jpg">
+                        </div>
+                        <div class="item">
+                            <a href="#">Smart Tablate</a>
+                            <img src="./images/smartTablate.jpg">
+                        </div>
+                    </div>
+                </div>
+                <!--End Popular Deparmenta-->
+
+                <!--Start Our Products-->
+                <div class="ourProducts">
+                    <h2>Our Products</h2>
+                    <div class="products">
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/supportStool.jpg" alt="">
+                                <img class="p2" src="./images/supportStool.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Support Stool Multiple">Support Stool Multiple</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">2.806.791 VND</h3>
+                                <h3 class="oldPrice">3.036.855 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/sonyCamera.jpg" alt="">
+                                <img class="p2" src="./images/sonyCamera.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Sony Brand Camera">Sony Brand Camera</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">17.047.802 VND</h3>
+                                <h3 class="oldPrice">17.277.866 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/smockstick.jpg" alt="">
+                                <img class="p2" src="./images/smockstick.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Smockstick Stand">Smockstick Stand</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">2.024.570 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/blackBeard.jpg" alt="">
+                                <img class="p2" src="./images/blackBeard.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Black Beard">Black Beard</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">276.078 VND</h3>
+                                <h3 class="oldPrice">2.198.269 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/cushion.jpg" alt="">
+                                <img class="p2" src="./images/cushion.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Cushion Bolster Covers">Cushion Bolster Covers</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">276.078 VND</h3>
+                                <h3 class="oldPrice">2.198.269 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/dinningChairs.jpg" alt="">
+                                <img class="p2" src="./images/dinningChairs.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Dinning Chairs">Dinning Chairs</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">575.162 VND</h3>
+                                <h3 class="oldPrice">1.495.421 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/appleWatch10.jpg" alt="">
+                                <img class="p2" src="./images/appleWatch10.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Apple Iwatch 10">Apple Iwatch 10</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star-half-alt"></i>
+                                </div>
+                                <h3 class="newPrice">920.259 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/bataForBeats.jpg" alt="">
+                                <img class="p2" src="./images/bataForBeats.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Bata For Beats Shoes">Bata For Beats Shoes</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">6.694.886 VND</h3>
+                                <h3 class="oldPrice">7.016.976 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--End Our Product-->
+
+                <!--Start -->
+                <div class="twoProducts">
+                    <div class="ad-image">
+                        <img src="./images/electronic.jpg" alt="">
+                        <div class="decription">
+                            <h2>Fresh Fruit, Vegetable </br> On Our Product</h2>
+                            <p>Organic Juice</p>
+                            <button>SHOP NOW</button>
+                        </div>
+                        <div class="page1"></div>
+                        <div class="page2"></div>
+                    </div>
+                    <div class="ad-image">
+                        <img src="./images/smartTablate.jpg" alt="">
+                        <div class="decription add">
+                            <h2>Vegetable Eggplant </br>100% Fresh Food</h2>
+                            <p>Fresh Food</p>
+                            <button>SHOP NOW</button>
+                        </div>
+                        <div class="page1"></div>
+                        <div class="page2"></div>
+                    </div>
+                </div>
+                <!--End -->
+
+                <!--Start Trending Products-->
+                <div class="trendingProducts">
+                    <h2>Trending Products</h2>
+                    <div class="products">
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/supportStool.jpg" alt="">
+                                <img class="p2" src="./images/supportStool.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Support Stool Multiple">Support Stool Multiple</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">2.806.791 VND</h3>
+                                <h3 class="oldPrice">3.036.855 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/sonyCamera.jpg" alt="">
+                                <img class="p2" src="./images/sonyCamera.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Sony Brand Camera">Sony Brand Camera</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">17.047.802 VND</h3>
+                                <h3 class="oldPrice">17.277.866 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/smockstick.jpg" alt="">
+                                <img class="p2" src="./images/smockstick.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Smockstick Stand">Smockstick Stand</h3>
+                                <div class="rate">
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">2.024.570 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <div class="item-picture">
+                            <div class="left">
+                                <img class="p1" src="./images/blackBeard.jpg" alt="">
+                                <img class="p2" src="./images/blackBeard.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <h3 class="itemName" title="Black Beard">Black Beard</h3>
+                                <div class="rate">
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i id="ok" class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3 class="newPrice">276.078 VND</h3>
+                                <h3 class="oldPrice">2.198.269 VND</h3>
+                            </div>
+                            <button>
+                                <i class="fas fa-cart-plus"></i>
+                                <p>ADD TO CART</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--End Trending Products-->
+
+                <!--Start Recent news-->
+                <div class="recentNews">
+                    <h2>Recent News</h2>
+                    <div class="newsContent">
+                        <div class="news">
+                            <div class="figure"><img src="./images/furniture.jpg" alt=""></div>
+                            <div class="time-comment"><span>Jan 11, 2021</span> <span>0 comment</span></div>
+                            <h3>Load More Product Features</h3>
+                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form,
+                                by injected humour, or randomised words which don't look even slightly believable.
+                            </p>
+                        </div>
+                        <div class="news">
+                            <div class="figure"><img src="./images/electronic.jpg" alt=""></div>
+                            <div class="time-comment"><span>Jan 11, 2021</span> <span>0 comment</span></div>
+                            <h3>Load More Product Features</h3>
+                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form,
+                                by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                        <div class="news">
+                            <div class="figure"><img src="./images/smartTV.jpg" alt=""></div>
+                            <div class="time-comment"><span>Jan 11, 2021</span> <span>0 comment</span></div>
+                            <h3>Load More Product Features</h3>
+                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have suffered alteration in some form,
+                                by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Recent News-->
+            </div>
+        </div>
+        <!--End main content-->
+
+        <!--Start Subcribe frame-->
+        <div class="subcribe-frame">
+            <h2 style="font-size: 20px;">Get The Lasted Deals</h2>
+            <p>And Receive $20 Coupon For First Shopping</p>
+            <div class="subcribe-input">
+                <input type="text" placeholder="Enter Your Email Address">
+                <button>Subcribe</button>
+            </div>
+        </div>
+        <!--End subcribe frame-->
+
+        <!--Start Footer-->
+        <div class="footer">
+            <div class="leftFooter">
+                <div class="logoBesto"><a href=""><img src="./images/bestoLogo.png" alt="beststoreshopforyou"></a>
+                </div>
+                <p>
+                    Torto neque egestas, eu vulputate magna eros eu erat. Aliquam erat
+                    vovutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                </p>
+                <div class="location">
+                    <h3>Location</h3>
+                    <div class="address">
+                        <i class="fa fa-home"></i>
+                        <p>7882 Longbranch Rd Reliance GIDC</p>
+                    </div>
+                    <div class="contact">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="tel-mail">
+                            <a href="tel:+014-33333-8888-6868">+014-33333-8888-6868</a>
+                            <a href="mailto:support@spacingtech.com">support@spacingtech.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightFooter">
+                <div class="column">
+                    <h3>Top Categories</h3>
+                    <a href="#">Cloth</a>
+                    <a href="#">Electronic</a>
+                    <a href="#">Funiture</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">Watch</a>
+                    <a href="#">Jewellry</a>
+                </div>
+                <div class="column">
+                    <h3>Services</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQ's</a>
+                    <a href="#">Blogs</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <div class="column">
+                    <h3>Privacy & Terms</h3>
+                    <a href="#">Payment Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Return Policy</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+                <div class="column">
+                    <h3>My Account</h3>
+                    <a href="#">Account</a>
+                    <a href="#">My Cart</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Wishlist</a>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="rightFooter-responsive">
+                <div class="column">
+                    <div class="title">
+                        <h3>Top Categories</h3><i onclick="openItem1()" class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="item" id="item1">
+                        <a href="#">Cloth</a>
+                        <a href="#">Electronic</a>
+                        <a href="#">Funiture</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Watch</a>
+                        <a href="#">Jewellry</a>
+                    </div>
+                    <script>
+                        let item1 = 0;
+                        function openItem1() {
+                            item1++;
+                            if (item1 % 2 != 0) { document.getElementById("item1").style.display = "flex"; }
+                            else { document.getElementById("item1").style.display = "none"; }
+
+                        }
+                    </script>
+                </div>
+                <div class="column">
+                    <div class="title">
+                        <h3>Services</h3><i onclick="openItem2()" class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="item" id="item2">
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">FAQ's</a>
+                        <a href="#">Blogs</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                    <script>
+                        let item2 = 0;
+                        function openItem2() {
+                            item2++;
+                            if (item2 % 2 != 0) { document.getElementById("item2").style.display = "flex"; }
+                            else { document.getElementById("item2").style.display = "none"; }
+
+                        }
+                    </script>
+                </div>
+                <div class="column">
+                    <div class="title">
+                        <h3>Privacy & Terms</h3><i onclick="openItem3()" class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="item" id="item3">
+                        <a href="#">Payment Policy</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Return Policy</a>
+                        <a href="#">Shipping Policy</a>
+                        <a href="#">Terms & Condition</a>
+                    </div>
+                    <script>
+                        let item3 = 0;
+                        function openItem3() {
+                            item3++;
+                            if (item3 % 2 != 0) { document.getElementById("item3").style.display = "flex"; }
+                            else { document.getElementById("item3").style.display = "none"; }
+
+                        }
+                    </script>
+                </div>
+                <div class="column">
+                    <div class="title">
+                        <h3>My Account</h3><i onclick="openItem4()" class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="item" id="item4">
+                        <a href="#">Account</a>
+                        <a href="#">My Cart</a>
+                        <a href="#">Order History</a>
+                        <a href="#">Wishlist</a>
+                        <a href="#"></a>
+                    </div>
+                    <script>
+                        let item4 = 0;
+                        function openItem4() {
+                            item4++;
+                            if (item4 % 2 != 0) { document.getElementById("item4").style.display = "flex"; }
+                            else { document.getElementById("item4").style.display = "none"; }
+
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!--End Footer-->
+
+        <!--Start end web-->
+        <div class="endWeb">
+            <div class="copyright">COPYRIGHT <span>&copy 2020</span> SPACINGTECH <span>RIGHTS RESERVED</span> </div>
+            <img src="./images/payment.png" alt="">
+        </div>
+        <!--End end web-->
+        <script src="./js/index.js"></script>
+    </div>
+
+</body>
+
+</html>
